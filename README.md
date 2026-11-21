@@ -46,6 +46,12 @@ Then `npm run build` for a production build, or deploy to Vercel in one click.
 | `ApexWorld` | Composes the above; owns the tap-state cycle and the agent overview cards |
 | `ApexOverviewPanel` | Top-left HUD: live clock, weather, and social links |
 | `app/api/weather` | Keyless [open-meteo](https://open-meteo.com) proxy for the panel's weather |
+| `TalkingAI` | NEAS chat panel with browser microphone input and spoken browser replies |
+| `app/api/talking-ai` | Server-side OpenRouter chat proxy with ZDR provider routing |
+
+## Talking AI configuration
+
+Set `OPENROUTER_API_KEY` as a server-only environment variable in the Vercel Preview environment. Optionally set `OPENROUTER_MODEL` (defaults to `openai/gpt-4o-mini`) and `NEXT_PUBLIC_SITE_URL`. Do not prefix provider secrets with `NEXT_PUBLIC_`. The chat route requests ZDR-capable routing from OpenRouter and does not persist conversation history. Microphone input requires browser speech-recognition support and permission; spoken replies use the browser's speech synthesis. Provider-backed TTS is not enabled in this initial phase.
 
 ## Customise
 
