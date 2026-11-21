@@ -1,5 +1,6 @@
 import ApexWorld from "@/components/ApexWorld";
 import ApexOverviewPanel from "@/components/ApexOverviewPanel";
+import TalkingAI from "@/components/TalkingAI";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       <section style={{ position: "relative", height: "100vh", minHeight: 620 }}>
         <ApexWorld />
       </section>
+
+      <TalkingAI />
 
       {/* Repo link — remove or replace for your own use */}
       <a
